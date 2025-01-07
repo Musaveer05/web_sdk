@@ -40,6 +40,9 @@ clevertap.onUserLogin.push({
     }
 });
 
+console.log("The emailId is${randomEmail}");
+console.log("The identity is${randomIdentity}");
+
 // This method works for updating.
 // More info about this in README file
 clevertap.profile.push({
