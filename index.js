@@ -43,7 +43,6 @@ clevertap.onUserLogin.push({
 console.log(`The emailId is ${randomEmail}`);
 console.log(`The Identity is ${randomIdentity}`);
 
-
 // This method works for updating.
 // More info about this in README file
 clevertap.profile.push({
@@ -51,3 +50,26 @@ clevertap.profile.push({
         "Gender": "M"
     }
 });
+
+
+
+// clevertap.notifications.push({
+//     "titleText": 'Would you like to receive Push Notifications?',
+//     "bodyText": 'We promise to only send you relevant content and give you updates on your transactions',
+//     "okButtonText": 'Sign me up!',
+//     "rejectButtonText": 'No thanks',
+//     "okButtonColor": '#f28046'
+// });
+
+document.getElementById('pushNotifBtn').addEventListener('click', function(){
+    console.log(
+    'us'
+    );
+    clevertap.notifications.push({
+        "titleText": 'Would you like to receive Push Notifications?',
+        "bodyText": 'We promise to only send you relevant content and give you updates on your transactions',
+        "okButtonText": 'Sign me up!',
+        "rejectButtonText": 'No thanks',
+        "okButtonColor": '#f28046'
+    });    
+})

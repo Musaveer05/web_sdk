@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <script type="text/javascript">
         var clevertap = { event: [], profile: [], account: [], onUserLogin: [], notifications: [], privacy: [] };
         // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
@@ -22,12 +23,18 @@
         })();
     </script>
 
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
     
 </head>
 
 <body>
     <h1>Hi this is my first demo for CleverTap's SDK Web Integration</h1>
+
+    <button id="pushNotifBtn">Click to Enable Push Notifications</button>
+
+    <script src="index.js"></script>
+
+    <!-- <script src="clevertap_sw.js"></script> -->
 </body>
 
 </html>
