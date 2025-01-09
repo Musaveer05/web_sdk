@@ -2,7 +2,7 @@ console.log('External JS file linked');
 
 // Function to generate a random alphanumeric string of specified length
 function generateRandomString(length) {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     for (let i = 0; i < length; i++) {
         result += characters.charAt(Math.floor(Math.random() * characters.length));
@@ -51,8 +51,7 @@ clevertap.profile.push({
     }
 });
 
-
-document.getElementById('pushNotifBtn').addEventListener('click', function () {
+document.getElementById('pushNotifBtn').addEventListener('click', function(){
     console.log('tapped');
     clevertap.notifications.push({
         "titleText": 'Would you like to receive Push Notifications?',
@@ -60,5 +59,5 @@ document.getElementById('pushNotifBtn').addEventListener('click', function () {
         "okButtonText": 'Sign me up!',
         "rejectButtonText": 'No thanks',
         "okButtonColor": '#f28046'
-    });
+    });    
 })
