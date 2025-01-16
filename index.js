@@ -62,3 +62,6 @@ document.getElementById('pushNotifBtn').addEventListener('click', function(){
     });    
 })
 
+// CleverTap.event.push("Product viewed");
+
+clevertap.event.push("Product Viewed");
