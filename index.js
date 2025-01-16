@@ -61,3 +61,4 @@ document.getElementById('pushNotifBtn').addEventListener('click', function(){
         "okButtonColor": '#f28046'
     });    
 })
+
