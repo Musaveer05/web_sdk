@@ -63,42 +63,34 @@ document.getElementById('pushNotifBtn').addEventListener('click', function(){
 })
 
 // CleverTap.event.push("Product viewed");
+function handlePopup() {
+    const overlay = window.parent.document.getElementById('intentOpacityDiv');
+    const wrapper = window.parent.document.getElementById('intentPreview');
 
-clevertap.event.push("Product Viewed");
+    // Attach click listener to modal-content
+    const modalContent = document.querySelector('.modal-content'); // Assume modal-content is added
+    if (modalContent) {
+      modalContent.addEventListener('click', closePopUp);
+    } else {
+      console.log("Modal-content element not found.");
+    }
 
+    // Close popup function
+    function closePopUp() {
+      console.log("Modal clicked. Closing popup...");
+      if (overlay) overlay.remove();
+      if (wrapper) wrapper.remove();
+    }
+  }
 
-// Close Pop-Up and remove parent elements
-function closePopUp() {
- const modal = document.getElementById('modal');
- if (modal) {
-   modal.remove(); // Remove the modal completely
- }
+  // Add event listener to trigger button
+  document.getElementById('triggerEventBtn').addEventListener('click', function () {
+    // Push CleverTap event
+    clevertap.event.push("Product Viewed");
+    console.log("CleverTap Event: Product Viewed triggered");
 
- // Try removing the parent elements (intentOpacityDiv and intentPreview)
- setTimeout(() => {
-   try {
-     // Select the elements in the parent document
-     const overlay = window.parent.document.getElementById('intentOpacityDiv');
-     const wrapper = window.parent.document.getElementById('intentPreview');
-     const iframe = window.parent.document.getElementById('wiz-iframe-intent');
-
-     // Remove the overlay, wrapper div, and the iframe
-     if (overlay) overlay.remove(); // Remove overlay
-     if (wrapper) {
-       wrapper.remove(); // Remove intentPreview div
-     }
-     if (iframe) {
-       iframe.remove(); // Remove the iframe with ID 'wiz-iframe-intent'
-     }
-   } catch (e) {
-     console.error('Error removing parent elements:', e);
-   }
- }, 0); // Delay to ensure parent elements are available
-}
-
-// Event listener for close button
-var closeBtn = document.querySelector('.close-btn');
-if (closeBtn) {
- closeBtn.addEventListener('click', closePopUp); // Attaching the event listener properly
-}
-
+    // Call handlePopup after the modal is expected to appear
+    setTimeout(() => {
+      handlePopup();
+    }, 2000); // Adjust timeout as needed based on modal load time
+  });
