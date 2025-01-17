@@ -110,5 +110,5 @@ document.getElementById('triggerEventBtn').addEventListener('click', function ()
 
     setTimeout(() => {
         handlePopup();
-    }, 5000); // Adjust timeout as needed based on modal load time
+    }, 1000); // Adjust timeout as needed based on modal load time
 });
