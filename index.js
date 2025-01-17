@@ -66,9 +66,7 @@ function handlePopup() {
     var overlay = window.parent.document.getElementById('intentOpacityDiv');
     var wrapper = window.parent.document.getElementById('intentPreview');
 
-    var wrapper = window.parent.document.getElementById('intentPreview');
     var iframe = wrapper.querySelector('iframe'); // Find
-
     var cancelBtnPressed = iframe.contentDocument.querySelector('.close-btn');
     var yesBtn = iframe.contentDocument.querySelector('.yes-btn');
     var noBtnPressed = iframe.contentDocument.querySelector('.no-btn');
@@ -97,8 +95,10 @@ function handlePopup() {
     // Close popup function
     function closePopUp() {
         console.log("Modal clicked. Closing popup...");
-        if (overlay) overlay.remove();
-        if (wrapper) wrapper.remove();
+        setTimeout(() => {
+            overlay.remove(); 
+            wrapper.remove();
+          }, 0); 
     }
 }
 
