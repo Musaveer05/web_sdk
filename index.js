@@ -62,13 +62,12 @@ document.getElementById('pushNotifBtn').addEventListener('click', function(){
     });    
 })
 
-// CleverTap.event.push("Product viewed");
 function handlePopup() {
     const overlay = window.parent.document.getElementById('intentOpacityDiv');
     const wrapper = window.parent.document.getElementById('intentPreview');
 
     // Attach click listener to modal-content
-    const cancelBtnPressed = document.querySelector('closeBtnForPopup'); // Assume modal-content is added
+    const cancelBtnPressed = document.querySelector('.close-btn'); // cancel button 
     if (cancelBtnPressed) {
         cancelBtnPressed.addEventListener('click', closePopUp);
     } else {
@@ -89,7 +88,6 @@ function handlePopup() {
     clevertap.event.push("Product Viewed");
     console.log("CleverTap Event: Product Viewed triggered");
 
-    // Call handlePopup after the modal is expected to appear
     setTimeout(() => {
       handlePopup();
     }, 2000); // Adjust timeout as needed based on modal load time
