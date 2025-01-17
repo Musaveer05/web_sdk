@@ -68,11 +68,22 @@ function handlePopup() {
 
     // Attach click listener to modal-content
     const cancelBtnPressed = document.querySelector('.close-btn'); // cancel button 
+    var yesBtn = document.querySelector('.yes-btn'); // Yes button
+    var noBtnPressed = document.querySelector('.no-btn'); // No button
+  
     if (cancelBtnPressed) {
         cancelBtnPressed.addEventListener('click', closePopUp);
-    } else {
-      console.log("cancelBtnPressed element not working.");
     }
+
+    if(noBtn){
+        noBtnPressed.addEventListener('click', closePopUp);
+    }
+
+    if (yesBtn) {
+        // here you do your desired
+        yesBtn.addEventListener('click', closePopUp);
+    }
+
 
     // Close popup function
     function closePopUp() {
