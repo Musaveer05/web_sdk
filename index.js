@@ -65,3 +65,40 @@ document.getElementById('pushNotifBtn').addEventListener('click', function(){
 // CleverTap.event.push("Product viewed");
 
 clevertap.event.push("Product Viewed");
+
+
+// Close Pop-Up and remove parent elements
+function closePopUp() {
+ const modal = document.getElementById('modal');
+ if (modal) {
+   modal.remove(); // Remove the modal completely
+ }
+
+ // Try removing the parent elements (intentOpacityDiv and intentPreview)
+ setTimeout(() => {
+   try {
+     // Select the elements in the parent document
+     const overlay = window.parent.document.getElementById('intentOpacityDiv');
+     const wrapper = window.parent.document.getElementById('intentPreview');
+     const iframe = window.parent.document.getElementById('wiz-iframe-intent');
+
+     // Remove the overlay, wrapper div, and the iframe
+     if (overlay) overlay.remove(); // Remove overlay
+     if (wrapper) {
+       wrapper.remove(); // Remove intentPreview div
+     }
+     if (iframe) {
+       iframe.remove(); // Remove the iframe with ID 'wiz-iframe-intent'
+     }
+   } catch (e) {
+     console.error('Error removing parent elements:', e);
+   }
+ }, 0); // Delay to ensure parent elements are available
+}
+
+// Event listener for close button
+var closeBtn = document.querySelector('.close-btn');
+if (closeBtn) {
+ closeBtn.addEventListener('click', closePopUp); // Attaching the event listener properly
+}
+
