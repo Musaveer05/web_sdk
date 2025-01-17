@@ -92,5 +92,5 @@ function handlePopup() {
     // Call handlePopup after the modal is expected to appear
     setTimeout(() => {
       handlePopup();
-    }, 1000); // Adjust timeout as needed based on modal load time
+    }, 2000); // Adjust timeout as needed based on modal load time
   });
