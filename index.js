@@ -63,21 +63,23 @@ document.getElementById('pushNotifBtn').addEventListener('click', function(){
 })
 
 function handlePopup() {
-    const overlay = window.parent.document.getElementById('intentOpacityDiv');
-    const wrapper = window.parent.document.getElementById('intentPreview');
+    var overlay = window.parent.document.getElementById('intentOpacityDiv');
+    var wrapper = window.parent.document.getElementById('intentPreview');
 
     // Attach click listener to modal-content
-    const cancelBtnPressed = document.querySelector('.close-btn'); // cancel button 
+    var cancelBtnPressed = document.querySelector('.close-btn'); // cancel button 
     var yesBtn = document.querySelector('.yes-btn'); // Yes button
     var noBtnPressed = document.querySelector('.no-btn'); // No button
   
     if (cancelBtnPressed) {
         cancelBtnPressed.addEventListener('click', closePopUp);
     }
+    else console.log('cancel btn is not working');
 
     if(noBtnPressed){
         noBtnPressed.addEventListener('click', closePopUp);
     }
+    else console.log('cancel btn is not working');
 
     if (yesBtn) {
         // here you do your desired
