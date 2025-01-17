@@ -68,11 +68,11 @@ function handlePopup() {
     const wrapper = window.parent.document.getElementById('intentPreview');
 
     // Attach click listener to modal-content
-    const modalContent = document.querySelector('.modal-content'); // Assume modal-content is added
-    if (modalContent) {
-      modalContent.addEventListener('click', closePopUp);
+    const cancelBtnPressed = document.querySelector('closeBtnForPopup'); // Assume modal-content is added
+    if (cancelBtnPressed) {
+        cancelBtnPressed.addEventListener('click', closePopUp);
     } else {
-      console.log("Modal-content element not found.");
+      console.log("cancelBtnPressed element not working.");
     }
 
     // Close popup function
