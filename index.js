@@ -75,7 +75,7 @@ function handlePopup() {
         cancelBtnPressed.addEventListener('click', closePopUp);
     }
 
-    if(noBtn){
+    if(noBtnPressed){
         noBtnPressed.addEventListener('click', closePopUp);
     }
 
