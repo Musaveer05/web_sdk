@@ -67,9 +67,9 @@ function handlePopup() {
     var wrapper = window.parent.document.getElementById('intentPreview');
 
     // Attach click listener to modal-content
-    var cancelBtnPressed = document.querySelector('.close-btn'); // cancel button 
+    var cancelBtnPressed = document.querySelector('close-btn'); // cancel button 
     var yesBtn = document.querySelector('.yes-btn'); // Yes button
-    var noBtnPressed = document.querySelector('.no-btn'); // No button
+    var noBtnPressed = document.querySelector('no-btn'); // No button
   
     if (cancelBtnPressed) {
         cancelBtnPressed.addEventListener('click', closePopUp);
@@ -103,5 +103,5 @@ function handlePopup() {
 
     setTimeout(() => {
       handlePopup();
-    }, 2000); // Adjust timeout as needed based on modal load time
+    }, 5000); // Adjust timeout as needed based on modal load time
   });
