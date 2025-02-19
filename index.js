@@ -31,22 +31,25 @@ clevertap.onUserLogin.push({
         "Name": randomName,            // Random string of length 3
         "Identity": randomIdentity,    // Random numeric string of length 8
         "Email": randomEmail,          // Email address with random string
-        "Phone": "+14155551234",       // Phone (with the country code)
+        "Phone": "+9186919951180",       // Phone (with the country code)
         "DOB": new Date(),             // Date of Birth. Date object
         "MSG-email": false,            // Disable email notifications
-        "MSG-push": true,              // Enable push notifications
-        "MSG-sms": true,               // Enable sms notifications
-        "MSG-whatsapp": true           // Enable WhatsApp notifications
+        "MSG-push": false,              // Enable push notifications
+        "MSG-sms": false,               // Enable sms notifications
+        "MSG-whatsapp": false           // Enable WhatsApp notifications
     }
 });
 
-console.log(`The emailId is ${randomEmail}`);
-console.log(`The Identity is ${randomIdentity}`);
+// console.log(`The emailId is ${randomEmail}`);
+// console.log(`The Identity is ${randomIdentity}`);
 
-// This method works for updating.
-// More info about this in README file
+// // This method works for updating.
+// // More info about this in README file
 clevertap.profile.push({
     "Site": {
+        "Email": 'mvmv9090@gmail.com',
+        "MSG-whatsapp": true,
+        "MSG-push": true,
         "Gender": "M"
     }
 });
@@ -70,11 +73,6 @@ function handlePopup() {
     var cancelBtnPressed = iframe.contentDocument.querySelector('.close-btn');
     var yesBtn = iframe.contentDocument.querySelector('.yes-btn');
     var noBtnPressed = iframe.contentDocument.querySelector('.no-btn');
-
-    // Attach click listener to modal-content
-    // var cancelBtnPressed = document.querySelector('close-btn'); // cancel button 
-    // var yesBtn = document.querySelector('.yes-btn'); // Yes button
-    // var noBtnPressed = document.querySelector('no-btn'); // No button
 
     if (cancelBtnPressed) {
         cancelBtnPressed.addEventListener('click', closePopUp);
