@@ -25,7 +25,7 @@ const randomName = generateRandomString(3);
 const randomIdentity = generateRandomNumericString(8); // Numeric string of length 8
 const randomEmail = `${randomName}@gmail.com`; // Combine random string with "@gmail.com"
 
-Check if the CleverTap SDK is loaded
+// Check if the CleverTap SDK is loaded
 clevertap.onUserLogin.push({
     "Site": {
         "Name": randomName,            // Random string of length 3
@@ -66,15 +66,15 @@ function handlePopup() {
     var overlay = window.parent.document.getElementById('wizpardiv0');
     // var wrapper = window.parent.document.getElementById('intentPreview');
 
-    // var iframe = wrapper.querySelector('iframe'); // Find
-    // var cancelBtnPressed = iframe.contentDocument.querySelector('.close-btn');
-    // var yesBtn = iframe.contentDocument.querySelector('.yes-btn');
-    // var noBtnPressed = iframe.contentDocument.querySelector('.no-btn');
+    var iframe = wrapper.querySelector('iframe'); // Find
+    var cancelBtnPressed = iframe.contentDocument.querySelector('.close-btn');
+    var yesBtn = iframe.contentDocument.querySelector('.yes-btn');
+    var noBtnPressed = iframe.contentDocument.querySelector('.no-btn');
 
     // Attach click listener to modal-content
-    var cancelBtnPressed = document.querySelector('close-btn'); // cancel button 
-    var yesBtn = document.querySelector('.yes-btn'); // Yes button
-    var noBtnPressed = document.querySelector('no-btn'); // No button
+    // var cancelBtnPressed = document.querySelector('close-btn'); // cancel button 
+    // var yesBtn = document.querySelector('.yes-btn'); // Yes button
+    // var noBtnPressed = document.querySelector('no-btn'); // No button
 
     if (cancelBtnPressed) {
         cancelBtnPressed.addEventListener('click', closePopUp);
