@@ -30,8 +30,7 @@ clevertap.onUserLogin.push({
     "Site": {
         "Name": randomName,            // Random string of length 3
         "Identity": randomIdentity,    // Random numeric string of length 8
-        "Email": randomEmail,          // Email address with random string
-        "Phone": "+14155551234",       // Phone (with the country code)
+        "Email": randomEmail,          // Email address with random string,       // Phone (with the country code)
         "DOB": new Date(),             // Date of Birth. Date object
         "MSG-email": false,            // Disable email notifications
         "MSG-push": true,              // Enable push notifications
