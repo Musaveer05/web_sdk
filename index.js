@@ -64,42 +64,43 @@ console.log(`The Identity is ${randomIdentity}`);
 
 function handlePopup() {
     var overlay = window.parent.document.getElementById('wizpardiv0');
+    console.log(overlay)
     // var wrapper = window.parent.document.getElementById('intentPreview');
 
-    var iframe = wrapper.querySelector('iframe'); // Find
-    var cancelBtnPressed = iframe.contentDocument.querySelector('.close-btn');
-    var yesBtn = iframe.contentDocument.querySelector('.yes-btn');
-    var noBtnPressed = iframe.contentDocument.querySelector('.no-btn');
+    // var iframe = wrapper.querySelector('iframe'); // Find
+    // var cancelBtnPressed = iframe.contentDocument.querySelector('.close-btn');
+    // var yesBtn = iframe.contentDocument.querySelector('.yes-btn');
+    // var noBtnPressed = iframe.contentDocument.querySelector('.no-btn');
 
     // Attach click listener to modal-content
     // var cancelBtnPressed = document.querySelector('close-btn'); // cancel button 
     // var yesBtn = document.querySelector('.yes-btn'); // Yes button
     // var noBtnPressed = document.querySelector('no-btn'); // No button
 
-    if (cancelBtnPressed) {
-        cancelBtnPressed.addEventListener('click', closePopUp);
-    }
-    else console.log('cancel btn is not working');
+    // if (cancelBtnPressed) {
+    //     cancelBtnPressed.addEventListener('click', closePopUp);
+    // }
+    // else console.log('cancel btn is not working');
 
-    if (noBtnPressed) {
-        noBtnPressed.addEventListener('click', closePopUp);
-    }
-    else console.log('cancel btn is not working');
+    // if (noBtnPressed) {
+    //     noBtnPressed.addEventListener('click', closePopUp);
+    // }
+    // else console.log('cancel btn is not working');
 
-    if (yesBtn) {
-        // here you do your desired
-        yesBtn.addEventListener('click', closePopUp);
-    }
+    // if (yesBtn) {
+    //     // here you do your desired
+    //     yesBtn.addEventListener('click', closePopUp);
+    // }
 
 
-    // Close popup function
-    function closePopUp() {
-        console.log("Modal clicked. Closing popup...");
-        setTimeout(() => {
-            overlay.remove(); 
-            // wrapper.remove();
-          }, 0); 
-    }
+    // // Close popup function
+    // function closePopUp() {
+    //     console.log("Modal clicked. Closing popup...");
+    //     setTimeout(() => {
+    //         overlay.remove(); 
+    //         // wrapper.remove();
+    //       }, 0); 
+    // }
 }
 
 // Add event listener to trigger button
