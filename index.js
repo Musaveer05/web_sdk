@@ -62,7 +62,7 @@ document.getElementById('pushNotifBtn').addEventListener('click', function () {
 })
 
 function handlePopup() {
-
+    console.log('inside handle pop up');
     var wrapper = window.parent.document.getElementById('wizParDiv0');
     var iframe = wrapper.querySelector('iframe')
 
