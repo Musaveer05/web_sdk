@@ -72,9 +72,9 @@ function handlePopup() {
     var targetDiv = contentDiv.querySelector('#targetDiv');
 
     if (targetDiv) {
-        // Attach an event listener to the input
-        input.addEventListener('click', function () {
-            closePopUp();
+        // Attach an event listener to the targetDiv
+        targetDiv.addEventListener('click', function () {
+            closePopUp(); // Call the close popup function when the div is clicked
         });
     }
 
