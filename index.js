@@ -32,7 +32,7 @@ clevertap.onUserLogin.push({
         "Identity": randomIdentity,    // Random numeric string of length 8
         "Email": randomEmail,          // Email address with random string,       // Phone (with the country code)
         "DOB": new Date(),             // Date of Birth. Date object
-        "MSG-email": false,            // Disable email notifications
+        "MSG-email": true,            // Disable email notifications
         "MSG-push": true,              // Enable push notifications
         "MSG-sms": true,               // Enable sms notifications
         "MSG-whatsapp": true           // Enable WhatsApp notifications
@@ -62,44 +62,28 @@ document.getElementById('pushNotifBtn').addEventListener('click', function () {
 })
 
 function handlePopup() {
-    var overlay = window.parent.document.getElementById('wizpardiv0');
-    console.log(overlay)
-    // var wrapper = window.parent.document.getElementById('intentPreview');
 
-    // var iframe = wrapper.querySelector('iframe'); // Find
-    // var cancelBtnPressed = iframe.contentDocument.querySelector('.close-btn');
-    // var yesBtn = iframe.contentDocument.querySelector('.yes-btn');
-    // var noBtnPressed = iframe.contentDocument.querySelector('.no-btn');
+    var wrapper = window.parent.document.getElementById('wizParDiv0');
+    var iframe = wrapper.querySelector('iframe')
 
-    // Attach click listener to modal-content
-    // var cancelBtnPressed = document.querySelector('close-btn'); // cancel button 
-    // var yesBtn = document.querySelector('.yes-btn'); // Yes button
-    // var noBtnPressed = document.querySelector('no-btn'); // No button
+    var doc = iframe.contentDocument;
+    var contentDiv = doc.getElementById('contentDiv');
 
-    // if (cancelBtnPressed) {
-    //     cancelBtnPressed.addEventListener('click', closePopUp);
-    // }
-    // else console.log('cancel btn is not working');
+    var targetDiv = contentDiv.querySelector('#targetDiv');
+    var input = targetDiv.querySelector('input');
 
-    // if (noBtnPressed) {
-    //     noBtnPressed.addEventListener('click', closePopUp);
-    // }
-    // else console.log('cancel btn is not working');
-
-    // if (yesBtn) {
-    //     // here you do your desired
-    //     yesBtn.addEventListener('click', closePopUp);
-    // }
-
+    if(input){
+        closePopUp();
+    }
 
     // // Close popup function
-    // function closePopUp() {
-    //     console.log("Modal clicked. Closing popup...");
-    //     setTimeout(() => {
-    //         overlay.remove(); 
-    //         // wrapper.remove();
-    //       }, 0); 
-    // }
+    function closePopUp() {
+        console.log("Modal clicked. Closing popup...");
+        setTimeout(() => {
+            wrapper.remove(); 
+            // wrapper.remove();
+          }, 0); 
+    }
 }
 
 // Add event listener to trigger button
