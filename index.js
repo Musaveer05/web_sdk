@@ -75,7 +75,7 @@ function handlePopup() {
     if (targetBtn) {
         // Attach an event listener to the targetDiv
         console.log('target Div is clicked');
-        targetDiv.addEventListener('click', closePopUp);
+        targetBtn.addEventListener('click', closePopUp);
 
     }
 
