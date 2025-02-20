@@ -69,15 +69,15 @@ function handlePopup() {
     var doc = iframe.contentDocument;
     var contentDiv = doc.getElementById('contentDiv');
 
-    var targetDiv = contentDiv.querySelector('#targetDiv');
+    // var targetDiv = contentDiv.querySelector('#targetDiv');
+    var targetBtn = contentDiv.querySelector('#targetBtn');
 
-    if (targetDiv) {
+    if (targetBtn) {
         // Attach an event listener to the targetDiv
         console.log('target Div is clicked');
         targetDiv.addEventListener('click', closePopUp);
 
     }
-
 
     // // Close popup function
     function closePopUp() {
