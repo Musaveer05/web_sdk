@@ -184,8 +184,8 @@ document.getElementById("leadCaptureForm").addEventListener("submit", async func
         const response = await fetch("https://eu1.api.clevertap.com/1/upload", {
             method: "POST",
             headers: {
-                "X-CleverTap-Account-Id": "94W-4Z9-8K7Z", // Replace with actual account ID
-                "X-CleverTap-Passcode": "QAW-AOV-CLEL", // Replace with actual passcode
+                "X-CleverTap-Account-Id": "TEST-98R-65Z-6K7Z", // Replace with actual account ID
+                "X-CleverTap-Passcode": "QYY-SED-OLEL", // Replace with actual passcode
                 "Content-Type": "application/json; charset=utf-8"
             },
             body: JSON.stringify(payload)
