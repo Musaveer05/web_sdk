@@ -25,7 +25,8 @@ const randomName = generateRandomString(3);
 const randomIdentity = generateRandomNumericString(8); // Numeric string of length 8
 const randomEmail = `${randomName}@gmail.com`; // Combine random string with "@gmail.com"
 
-// Check if the CleverTap SDK is loaded
+
+// call this when a user login form is submitted.
 clevertap.onUserLogin.push({
     "Site": {
         "Name": randomName,            // Random string of length 3
@@ -42,14 +43,7 @@ clevertap.onUserLogin.push({
 console.log(`The emailId is ${randomEmail}`);
 console.log(`The Identity is ${randomIdentity}`);
 
-// This method works for updating.
-// More info about this in README file
-// clevertap.profile.push({
-//     "Site": {
-//         "Gender": "M"
-//     }
-// });
-
+// for web push notification.
 document.getElementById('pushNotifBtn').addEventListener('click', function () {
     console.log('tapped');
     clevertap.notifications.push({
@@ -60,85 +54,3 @@ document.getElementById('pushNotifBtn').addEventListener('click', function () {
         "okButtonColor": '#f28046'
     });
 })
-
-// function handlePopup() {
-//     console.log('inside handle pop up');
-//     var wrapper = window.parent.document.getElementById('wizParDiv0');
-//     var iframe = wrapper.querySelector('iframe')
-
-//     var doc = iframe.contentDocument;
-//     var contentDiv = doc.getElementById('contentDiv');
-
-//     var targetBtn = contentDiv.querySelector('#targetBtn');
-
-//     if (targetBtn) {
-//         console.log('target Div is clicked');
-//         targetBtn.addEventListener('click', closePopUp);
-
-//     }
-
-//     // // Close popup function
-//     function closePopUp() {
-//         console.log("Modal clicked. Closing popup...");
-//         setTimeout(() => {
-//             wrapper.remove(); 
-//             // wrapper.remove();
-//           }, 0); 
-//     }
-// }
-
-// // Add event listener to trigger button
-// document.getElementById('triggerEventBtn').addEventListener('click', function () {
-//     // Push CleverTap event
-//     clevertap.event.push("Product Viewed");
-//     console.log("CleverTap Event: Product Viewed triggered");
-
-//     setTimeout(() => {
-//         handlePopup();
-//     }, 1000); // Adjust timeout as needed based on modal load time
-// });
-
-
-// async function getIpDetails(){
-//     const ip = '67.250.186.196';
-//     const accessKey = '4c9ec11e-768b-487d-96f7-0551db09258d';
-//     const url = 'https://apiip.net/api/check?ip='+ ip +'&accessKey='+ accessKey; 
-  
-//     // Make a request and store the response
-//     const response = await fetch(url);
-  
-//     // Decode JSON response:
-//     const result = await response.json();
-  
-//     // Output the "code" value inside "currency" object
-//     return result;
-// }
-// const fireCleaverTapEvent = async response => {
-//     // const deviceInformation = getDeviceInformation();
-//     const ipDetails = await getIpDetails();
-//     console.log("ipDetails",ipDetails)
-//     clevertap.profile.push({
-//       "Site": {
-//         "isPasswordCreated":true,
-//         latitude: ipDetails?.latitude,
-//         longitude: ipDetails?.longitude,
-//         country: ipDetails?.countryName,
-//         ip: ipDetails?.ip
-//       }
-//      });
-//     // if (ipDetails?.latitude && ipDetails?.longitude) {
-//     //   clevertap.getLocation(ipDetails?.latitude, i)
-//     // }
-//     if (ipDetails?.latitude && ipDetails?.longitude) {
-//       clevertap.getLocation(ipDetails?.latitude, ipDetails?.longitude);
-//     }
-
-//    clevertap.event.push("test_event1", {
-//       "Sign_Up_Completed":true,
-//       "Timestamp": new Date().getTime()
-//     });
-
-
-//   };
-
-
