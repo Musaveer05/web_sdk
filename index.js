@@ -53,7 +53,7 @@ clevertap.onUserLogin.push({
 });
 
 clevertap.event.push("Product Delivered", {
-  "Product ame":"Casio Chronograph Watch",
+  "Product ame":"Casio Chronograph",
   "Cateory":"Mens Accessories",
   "Prie":59.99,
   "Dae": new Date()
