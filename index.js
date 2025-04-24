@@ -52,6 +52,14 @@ clevertap.onUserLogin.push({
     }
 });
 
+clevertap.event.push("File Uploaded", {
+  "File Name": "resume.pdf",
+  "File Size (KB)": 256,
+  "File Type": "application/pdf",
+  "Upload Time": new Date().toISOString(),
+  "User Email": randomEmail
+});
+
 console.log(`The emailId is ${randomEmail}`);
 console.log(`The Identity is ${randomIdentity}`);
 
