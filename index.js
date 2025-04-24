@@ -25,6 +25,16 @@ const randomName = generateRandomString(3);
 const randomIdentity = generateRandomNumericString(8); // Numeric string of length 8
 const randomEmail = `${randomName}@gmail.com`; // Combine random string with "@gmail.com"
 
+function getRandomIndianPhoneNumber() {
+  const firstDigit = ['7', '8', '9'][Math.floor(Math.random() * 3)];
+  const remainingDigits = Math.floor(100000000 + Math.random() * 900000000); // 9 digits
+  const phone = `+91${firstDigit}${remainingDigits}`;
+  return phone;
+}
+
+// Example usage:
+const randomPhone = getRandomIndianPhoneNumber();
+console.log(randomPhone); // e.g., +919876543210
 
 // call this when a user login form is submitted.
 clevertap.onUserLogin.push({
@@ -33,7 +43,8 @@ clevertap.onUserLogin.push({
         "Identity": randomIdentity,    // Random numeric string of length 8
         "Email": randomEmail,          // Email address with random string,       // Phone (with the country code)
         "DOB": new Date(),             // Date of Birth. Date object
-        "MSG-email": true,            // Disable email notifications
+        "MSG-email": true,// Disable email notifications
+        "Phone": randomPhone,
         "MSG-push": true,              // Enable push notifications
         "MSG-sms": true,               // Enable sms notifications
         "MSG-whatsapp": true,           // Enable WhatsApp notifications
