@@ -59,6 +59,14 @@ clevertap.event.push("Product Delivered", {
   "Dae": new Date()
 });
 
+clevertap.event.push("Product Delivered", {
+  "Product ame":"Casio Chronograph watch 1",
+  "Cateory":"Mens Accessories",
+  "Prie":59.99,
+  "Dae": new Date()
+});
+
+
 console.log(`The emailId is ${randomEmail}`);
 console.log(`The Identity is ${randomIdentity}`);
 
