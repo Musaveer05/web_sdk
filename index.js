@@ -52,11 +52,11 @@ clevertap.onUserLogin.push({
     }
 });
 
-clevertap.event.push("Product Viewed", {
-  "Product name":"Casio Chronograph Watch",
-  "Category":"Mens Accessories",
-  "Price":59.99,
-  "Date": new Date()
+clevertap.event.push("Product Delivered", {
+  "Product ame":"Casio Chronograph Watch",
+  "Cateory":"Mens Accessories",
+  "Prie":59.99,
+  "Dae": new Date()
 });
 
 console.log(`The emailId is ${randomEmail}`);
