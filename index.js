@@ -52,12 +52,11 @@ clevertap.onUserLogin.push({
     }
 });
 
-clevertap.event.push("File Uploaded", {
-  "File Name": "resume.pdf",
-  "File Size (KB)": 256,
-  "File Type": "application/pdf",
-  "Upload Time": new Date().toISOString(),
-  "User Email": randomEmail
+clevertap.event.push("Product Viewed", {
+  "Product name":"Casio Chronograph Watch",
+  "Category":"Mens Accessories",
+  "Price":59.99,
+  "Date": new Date()
 });
 
 console.log(`The emailId is ${randomEmail}`);
