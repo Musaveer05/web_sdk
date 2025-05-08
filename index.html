@@ -26,11 +26,19 @@
 </head>
 
 <body>
-    <h1>Hi this is my first demo for CleverTap's SDK Web Integration</h1>
+       <h2>User Info Form</h2>
+    <form id="userForm">
+        <label>Name: <input type="text" id="name" required /></label><br><br>
+        <label>Identity (Numeric): <input type="text" id="identity" pattern="\d{8}" required /></label><br><br>
+        <label>Email: <input type="email" id="email" required /></label><br><br>
+        <label>Phone (+91XXXXXXXXXX): <input type="tel" id="phone" pattern="\+91[7-9]\d{9}" required /></label><br><br>
+        <button type="submit">Submit</button>
+    </form>
 
-    <button id="pushNotifBtn">Click to Enable Push Notifications</button>
-    
-    <script src="index.js"></script>
+    <button id="pushNotifBtn">Enable Push Notification</button>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
