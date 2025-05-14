@@ -16,7 +16,7 @@ document.getElementById('userForm').addEventListener('submit', function (event) 
     clevertap.onUserLogin.push({
         "Site": {
             "Name": name,
-            "Identity": identity,
+            // "Identity": identity,
             "Email": email,
             "Phone": phone,
             "DOB": new Date(),
