@@ -57,7 +57,7 @@ document.getElementById('pushNotifBtn').addEventListener('click', function () {
 
 document.getElementById('productviewed').addEventListener('click', function(){
     console.log('product Viewed');
-CleverTap.event.push("Product viewed");
+    cleverTap.event.push("Product viewed");
 });
 
 
