@@ -11,7 +11,7 @@
         // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
         clevertap.account.push({ "id": "TEST-98R-65Z-6K7Z" }, "eu1"); 
         console.log('no region specified sets it to default europe region')
-        clevertap.privacy.push({ optOut: false }); //set the flag to true, if the user of the device opts out of sharing their data
+        clevertap.privacy.push({ optOut: true }); //set the flag to true, if the user of the device opts out of sharing their data
         clevertap.privacy.push({ useIP: true }); //set the flag to true, if the user agrees to share their IP data
         (function () {
             var wzrk = document.createElement('script');
@@ -26,19 +26,12 @@
 </head>
 
 <body>
-       <h2>User Info Form</h2>
-    <form id="userForm">
-        <label>Name: <input type="text" id="name" required /></label><br><br>
-        <label>Identity (Numeric): <input type="text" id="identity" pattern="\d{8}" required /></label><br><br>
-        <label>Email: <input type="email" id="email" required /></label><br><br>
-        <label>Phone (+91XXXXXXXXXX): <input type="tel" id="phone" pattern="\+91[7-9]\d{9}" required /></label><br><br>
-        <button type="submit">Submit</button>
-    </form>
+    <h1>Hi this is my first demo for CleverTap's SDK Web Integration</h1>
 
-    <button id="pushNotifBtn">Enable Push Notification</button>
+    <button id="pushNotifBtn">Click to Enable Push Notifications</button>
+    <button id="productviewed">Product Viewed</button>
 
-    <script src="script.js"></script>
-
+    <script src="index.js"></script>
 </body>
 
 </html>
