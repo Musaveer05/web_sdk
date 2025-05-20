@@ -54,3 +54,10 @@ document.getElementById('pushNotifBtn').addEventListener('click', function () {
         "okButtonColor": '#f28046'
     });
 })
+
+document.getElementById('productviewed').addEventListener('click', function(){
+    console.log('product Viewed');
+CleverTap.event.push("Product viewed");
+});
+
+
