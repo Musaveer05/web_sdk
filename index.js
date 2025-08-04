@@ -40,8 +40,8 @@ console.log('External JS file linked');
 //     }
 // });
 
-console.log(`The emailId is ${randomEmail}`);
-console.log(`The Identity is ${randomIdentity}`);
+// console.log(`The emailId is ${randomEmail}`);
+// console.log(`The Identity is ${randomIdentity}`);
 
 // for web push notification.
 document.getElementById('pushNotifBtn').addEventListener('click', function () {
@@ -56,6 +56,7 @@ document.getElementById('pushNotifBtn').addEventListener('click', function () {
 })
 
 document.getElementById('productviewed').addEventListener('click', function(){
+    console.log('prod viewed');
     cleverTap.event.push("Product viewed");
 });
 
