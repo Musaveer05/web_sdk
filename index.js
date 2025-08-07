@@ -27,18 +27,15 @@ console.log('External JS file linked');
 
 
 // // call this when a user login form is submitted.
-// clevertap.onUserLogin.push({
-//     "Site": {
-//         "Name": randomName,            // Random string of length 3
-//         "Identity": randomIdentity,    // Random numeric string of length 8
-//         "Email": randomEmail,          // Email address with random string,       // Phone (with the country code)
-//         "DOB": new Date(),             // Date of Birth. Date object
-//         "MSG-email": true,            // Disable email notifications
-//         "MSG-push": true,              // Enable push notifications
-//         "MSG-sms": true,               // Enable sms notifications
-//         "MSG-whatsapp": true           // Enable WhatsApp notifications
-//     }
-// });
+clevertap.onUserLogin.push({
+    "Site": {
+        "Identity": "9892974096",    // Random numeric string of length 8
+        "MSG-email": true,            // Disable email notifications
+        "MSG-push": true,              // Enable push notifications
+        "MSG-sms": true,               // Enable sms notifications
+        "MSG-whatsapp": true           // Enable WhatsApp notifications
+    }
+});
 
 // console.log(`The emailId is ${randomEmail}`);
 // console.log(`The Identity is ${randomIdentity}`);
@@ -57,7 +54,7 @@ document.getElementById('pushNotifBtn').addEventListener('click', function () {
 
 document.getElementById('productviewed').addEventListener('click', function(){
     console.log('prod viewed');
-    cleverTap.event.push("Product viewed");
+    clevertap.event.push("Store_Page");
 });
 
 
