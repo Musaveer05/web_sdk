@@ -29,7 +29,8 @@ console.log('External JS file linked');
 // // call this when a user login form is submitted.
 clevertap.onUserLogin.push({
     "Site": {
-        "Identity": "989297402610",    // Random numeric string of length 8
+        "Identity": "989197402610",    // Random numeric string of length 8
+        "Phone":"+91123432404359234"
         "MSG-email": true,            // Disable email notifications
         "MSG-push": true,              // Enable push notifications
         "MSG-sms": true,               // Enable sms notifications
