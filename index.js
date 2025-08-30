@@ -34,7 +34,7 @@ clevertap.onUserLogin.push({
         "MSG-email": true,            // Disable email notifications
         "MSG-push": true,              // Enable push notifications
         "MSG-sms": true,               // Enable sms notifications
-        "MSG-whatsapp": true           // Enable WhatsApp notifications
+        "MSG-whatsapp": false           // Enable WhatsApp notifications
     }
 });
 
