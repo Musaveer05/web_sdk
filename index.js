@@ -1,4 +1,6 @@
 console.log('External JS file linked');
+clevertap.init('TEST-98R-65Z-6K7Z', 'eu', '') // Replace with values applicable to you
+clevertap.setLogLevel(3);
 
 // // Function to generate a random alphanumeric string of specified length
 // function generateRandomString(length) {
