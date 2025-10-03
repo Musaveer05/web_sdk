@@ -50,7 +50,7 @@ document.getElementById('pushNotifBtn').addEventListener('click', function () {
         "rejectButtonText": 'No thanks',
         "okButtonColor": '#f28046'
     });
-})
+});
 
 document.getElementById('productviewed').addEventListener('click', function(){
     console.log('prod viewed');
