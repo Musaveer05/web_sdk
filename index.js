@@ -40,15 +40,29 @@ clevertap.onUserLogin.push({
 // console.log(`The Identity is ${randomIdentity}`);
 
 // for web push notification.
+// document.getElementById('pushNotifBtn').addEventListener('click', function () {
+//     console.log('tapped');
+//     clevertap.notifications.push({
+//         "titleText": 'Would you like to receive Push Notifications?',
+//         "bodyText": 'We promise to only send you relevant content and give you updates on your transactions',
+//         "okButtonText": 'Sign me up!',
+//         "rejectButtonText": 'No thanks',
+//         "okButtonColor": '#f28046'
+//     });
+// });
+
 document.getElementById('pushNotifBtn').addEventListener('click', function () {
     console.log('tapped');
-    clevertap.notifications.push({
-        "titleText": 'Would you like to receive Push Notifications?',
-        "bodyText": 'We promise to only send you relevant content and give you updates on your transactions',
-        "okButtonText": 'Sign me up!',
-        "rejectButtonText": 'No thanks',
-        "okButtonColor": '#f28046'
-    });
+    setTimeout(function() {
+clevertap.notifications.push({
+"titleText": "Exclusive Access To Fine Timepieces",
+"bodyText": "Be the first to know about new arrivals, special offers, and personalised recommendations.",
+"okButtonText": "Notify Me",
+"rejectButtonText": "Not Now",
+"okButtonColor":"#F28046",
+"askAgainTimeInSeconds":604800
+});
+}, 10000);
 });
 
 document.getElementById('productviewed').addEventListener('click', function(){
