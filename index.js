@@ -60,7 +60,7 @@ clevertap.notifications.push({
 "okButtonText": "Notify Me",
 "rejectButtonText": "Not Now",
 "okButtonColor":"#F28046",
-"askAgainTimeInSeconds":604800
+"askAgainTimeInSeconds":60
 });
 }, 10000);
 });
