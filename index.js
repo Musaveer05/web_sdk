@@ -51,8 +51,6 @@ clevertap.onUserLogin.push({
 //     });
 // });
 
-document.getElementById('pushNotifBtn').addEventListener('click', function () {
-    console.log('tapped');
     setTimeout(function() {
 clevertap.notifications.push({
 "titleText": "Exclusive Access To Fine Timepieces",
@@ -63,7 +61,7 @@ clevertap.notifications.push({
 "askAgainTimeInSeconds":60
 });
 }, 10000);
-});
+
 
 document.getElementById('productviewed').addEventListener('click', function(){
     console.log('prod viewed');
