@@ -27,14 +27,15 @@ console.log('External JS file linked');
 
 
 // // call this when a user login form is submitted.
-clevertap.onUserLogin.push({
-    "Site": {
-        "Identity": "000111222",           // Phone (with the country code)
-        "MSG-email": true,            // Disable email notifications
-        "MSG-push": true,              // Enable push notifications
-        "MSG-whatsapp": false           // Enable WhatsApp notifications
-    }
-});
+
+// clevertap.onUserLogin.push({
+//     "Site": {
+//         "Identity": "000111222",           // Phone (with the country code)
+//         "MSG-email": true,            // Disable email notifications
+//         "MSG-push": true,              // Enable push notifications
+//         "MSG-whatsapp": false           // Enable WhatsApp notifications
+//     }
+// });
 
 // console.log(`The emailId is ${randomEmail}`);
 // console.log(`The Identity is ${randomIdentity}`);
