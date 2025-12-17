@@ -68,7 +68,7 @@ clevertap.notifications.push({
 
 document.getElementById('productviewed').addEventListener('click', function(){
     console.log('prod viewed');
-    clevertap.event.push("Store_Page");
+    clevertap.event.push("test_event_01",{"date":"$D_1765954800"});
 });
 
 
