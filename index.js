@@ -86,39 +86,39 @@ document.getElementById("loginBtn").addEventListener("click", function () {
 });
 
 
-// document.getElementById('productviewed').addEventListener('click', function(){
-//     console.log('prod viewed');
-//     // clevertap.event.push("test_event_01",{"date":"$D_1765954800"});
+document.getElementById('productviewed').addEventListener('click', function(){
+    console.log('Store Page raised');
+    clevertap.event.push("Store_Page", {});
 
-//     fetch('https://api.clevertap.com/1/upload', {
-//     method: 'POST',
-//     headers: {
-//       'X-CleverTap-Account-Id': 'TEST-8WW-745-K67Z',
-//       'X-CleverTap-Passcode': 'SCW-BAZ-GEEL',
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify({
-//       d: [
-//         {
-//           identity: 'testxyz11',
-//           type: 'event',
-//           evtName: 'test_event_01',
-//           evtData: {
-//             "date": "$D_1765955400"
-//           }
-//         }
-//       ]
-//     })
-//   })
-//   .then(res => res.json())
-//   .then(data => {
-//     console.log('CleverTap response:', data);
-//   })
-//   .catch(err => {
-//     console.error('CleverTap API error:', err);
-//   });
+  //   fetch('https://api.clevertap.com/1/upload', {
+  //   method: 'POST',
+  //   headers: {
+  //     'X-CleverTap-Account-Id': 'TEST-8WW-745-K67Z',
+  //     'X-CleverTap-Passcode': 'SCW-BAZ-GEEL',
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify({
+  //     d: [
+  //       {
+  //         identity: 'testxyz11',
+  //         type: 'event',
+  //         evtName: 'test_event_01',
+  //         evtData: {
+  //           "date": "$D_1765955400"
+  //         }
+  //       }
+  //     ]
+  //   })
+  // })
+  // .then(res => res.json())
+  // .then(data => {
+  //   console.log('CleverTap response:', data);
+  // })
+  // .catch(err => {
+  //   console.error('CleverTap API error:', err);
+  // });
 
     
-// });
+});
 
 
