@@ -53,16 +53,15 @@ console.log('External JS file linked');
 // });
 
 document.getElementById('pushNotifBtn').addEventListener('click', function () {
-    setTimeout(function() {
-clevertap.notifications.push({
-"titleText": "Exclusive Access To Fine Timepieces",
-"bodyText": "Be the first to know about new arrivals, special offers, and personalised recommendations.",
-"okButtonText": "Notify Me",
-"rejectButtonText": "Not Now",
-"okButtonColor":"#F28046",
-"askAgainTimeInSeconds":60
-});
-}, 10000);
+    console.log("asking");
+  clevertap.notifications.push({
+    titleText: "Exclusive Access To Fine Timepieces",
+    bodyText: "Be the first to know about new arrivals, special offers, and personalised recommendations.",
+    okButtonText: "Notify Me",
+    rejectButtonText: "Not Now",
+    okButtonColor: "#F28046",
+    askAgainTimeInSeconds: 60
+  });
 });
 
 document.getElementById("loginBtn").addEventListener("click", function () {
