@@ -87,7 +87,7 @@ document.getElementById("loginBtn").addEventListener("click", function () {
 
 document.getElementById('productviewed').addEventListener('click', function(){
     console.log('Store Page raised');
-    clevertap.event.push("Store_Page", {});
+    clevertap.event.push("Charged", {});
 
   //   fetch('https://api.clevertap.com/1/upload', {
   //   method: 'POST',
