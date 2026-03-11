@@ -85,39 +85,19 @@ document.getElementById("loginBtn").addEventListener("click", function () {
 });
 
 
-document.getElementById('productviewed').addEventListener('click', function(){
-    console.log('Store Page raised');
-    clevertap.event.push("Charged", {});
+var num1 = "12345";   // string
+var num2 = 12345;     // integer
 
-  //   fetch('https://api.clevertap.com/1/upload', {
-  //   method: 'POST',
-  //   headers: {
-  //     'X-CleverTap-Account-Id': 'TEST-8WW-745-K67Z',
-  //     'X-CleverTap-Passcode': 'SCW-BAZ-GEEL',
-  //     'Content-Type': 'application/json'
-  //   },
-  //   body: JSON.stringify({
-  //     d: [
-  //       {
-  //         identity: 'testxyz11',
-  //         type: 'event',
-  //         evtName: 'test_event_01',
-  //         evtData: {
-  //           "date": "$D_1765955400"
-  //         }
-  //       }
-  //     ]
-  //   })
-  // })
-  // .then(res => res.json())
-  // .then(data => {
-  //   console.log('CleverTap response:', data);
-  // })
-  // .catch(err => {
-  //   console.error('CleverTap API error:', err);
-  // });
+document.getElementById('productviewed').addEventListener('click', function () {
+    console.log('order place');
 
-    
+    // Event with string order_id
+    clevertap.event.push("c_order_placed", {
+        "order_id": num1
+    });
+
+    // Event with integer order_id
+    clevertap.event.push("c_order_placed", {
+        "order_id": num2
+    });
 });
-
-
