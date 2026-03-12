@@ -93,11 +93,11 @@ document.getElementById('productviewed').addEventListener('click', function () {
 
     // Event with string order_id
     clevertap.event.push("c_order_placed", {
-        "order_id": num1
+        "order_id": "690992545418879000"
     });
 
     // Event with integer order_id
     clevertap.event.push("c_order_placed", {
-        "order_id": num2
+        "order_id": "690992545418879421"
     });
 });
