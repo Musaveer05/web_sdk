@@ -92,12 +92,10 @@ document.getElementById('productviewed').addEventListener('click', function () {
     console.log('order place');
 
     // Event with string order_id
-    clevertap.event.push("c_order_placed", {
-        "order_id": "690992545418879000"
+    clevertap.event.push("Store_Page", {
     });
 
     // Event with integer order_id
-    clevertap.event.push("c_order_placed", {
-        "order_id": "690992545418879421"
+    clevertap.event.push("Child eSIM Activated", {
     });
 });
