@@ -98,7 +98,7 @@ document.getElementById('productviewed').addEventListener('click', function () {
 // });
 
     clevertap.event.push("test_event_01", {
-"date": new Date(2026, 2, 16, 10, 22, 0),
+"date": new Date(2026, 2, 16, 10, 35, 0),
     "test_prop": "Eng"
 
 });
