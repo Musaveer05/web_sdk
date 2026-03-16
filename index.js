@@ -101,7 +101,7 @@ document.getElementById('productviewed').addEventListener('click', function () {
 "date": new Date(2026, 2, 16, 10, 22, 0),
     "test_prop": "Eng"
 
-}
+});
 
 
 
