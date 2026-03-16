@@ -93,7 +93,7 @@ document.getElementById('productviewed').addEventListener('click', function () {
 
     // Event with string order_id
     clevertap.event.push("test_event_01", {
-    "date": new Date(2026, 2, 15, 14, 35, 0),
+    "date": new Date(2026, 2, 16, 09, 57, 0),
         "test_prop": "Eng"
 });
 
