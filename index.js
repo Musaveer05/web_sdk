@@ -91,11 +91,17 @@ var num2 = 12345;     // integer
 document.getElementById('productviewed').addEventListener('click', function () {
     console.log('Raised test_event_01 having Date prop');
 
-    const eventDate = Math.floor(new Date(2026, 2, 16, 10, 15, 0).getTime() / 1000); // Convert to epoch seconds
-cleverTap.event.push("test_event_01", {
-    "date": `$D_${eventDate}`,
+//     const eventDate = Math.floor(new Date(2026, 2, 16, 10, 15, 0).getTime() / 1000); // Convert to epoch seconds
+// cleverTap.event.push("test_event_01", {
+//     "date": `$D_${eventDate}`,
+//     "test_prop": "Eng"
+// });
+
+    clevertap.event.push("test_event_01", {
+"date": new Date(2026, 2, 16, 10, 22, 0),
     "test_prop": "Eng"
-});
+
+}
 
 
 
