@@ -97,8 +97,8 @@ document.getElementById('productviewed').addEventListener('click', function () {
 //     "test_prop": "Eng"
 // });
 
-    clevertap.event.push("c_order_placed", {
-order_id: "690992545418879000"
+    clevertap.event.push("c_order_placed1", {
+order_id_1: "690992545418879000"
 });
 
 
