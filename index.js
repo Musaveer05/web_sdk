@@ -97,10 +97,8 @@ document.getElementById('productviewed').addEventListener('click', function () {
 //     "test_prop": "Eng"
 // });
 
-    clevertap.event.push("test_event_01", {
-"date": new Date(2026, 2, 16, 10, 35, 0),
-    "test_prop": "Eng"
-
+    clevertap.event.push("c_order_placed", {
+order_id: "690992545418879000"
 });
 
 
