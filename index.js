@@ -98,7 +98,7 @@ document.getElementById('productviewed').addEventListener('click', function () {
 // });
 
     clevertap.event.push("c_order_placed1", {
-order_id_1: "690992545418879000"
+order_id_1: "690992545418879489"
 });
 
 
