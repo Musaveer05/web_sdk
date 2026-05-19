@@ -107,3 +107,29 @@ order_id_1: "690992545418879489"
     // clevertap.event.push("Child eSIM Activated", {
     // });
 });
+
+
+// Delayed CSP injection for testing
+setTimeout(() => {
+
+    console.log("Injecting CSP now...");
+
+    const meta = document.createElement('meta');
+
+    meta.httpEquiv = "Content-Security-Policy";
+
+    // Allow scripts but block inline onclick handlers
+    meta.content =
+        "script-src 'self' 'unsafe-inline' https://d2r1yp2w7bby2u.cloudfront.net; script-src-attr 'none'";
+
+    document.head.appendChild(meta);
+
+    console.log("CSP injected successfully");
+
+}, 15000); // inject after 15 seconds
+
+
+
+
+
+
