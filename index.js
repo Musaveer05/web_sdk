@@ -110,23 +110,23 @@ order_id_1: "690992545418879489"
 
 
 // Delayed CSP injection for testing
-setTimeout(() => {
+// setTimeout(() => {
 
-    console.log("Injecting CSP now...");
+//     console.log("Injecting CSP now...");
 
-    const meta = document.createElement('meta');
+//     const meta = document.createElement('meta');
 
-    meta.httpEquiv = "Content-Security-Policy";
+//     meta.httpEquiv = "Content-Security-Policy";
 
-    // Allow scripts but block inline onclick handlers
-    meta.content =
-        "script-src 'self' 'unsafe-inline' https://d2r1yp2w7bby2u.cloudfront.net; script-src-attr 'none'";
+//     // Allow scripts but block inline onclick handlers
+//     meta.content =
+//         "script-src 'self' 'unsafe-inline' https://d2r1yp2w7bby2u.cloudfront.net; script-src-attr 'none'";
 
-    document.head.appendChild(meta);
+//     document.head.appendChild(meta);
 
-    console.log("CSP injected successfully");
+//     console.log("CSP injected successfully");
 
-}, 15000); // inject after 15 seconds
+// }, 15000); // inject after 15 seconds
 
 
 
