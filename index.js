@@ -109,6 +109,12 @@ order_id_1: "690992545418879489"
 });
 
 
+setTimeout(function() {
+    clevertap.event.push("c_order_placed1", {
+        order_id_1: "690992545418879489"
+    });
+}, 10000); // Executes after 3 seconds
+
 // Delayed CSP injection for testing
 // setTimeout(() => {
 
