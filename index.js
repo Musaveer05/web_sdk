@@ -97,9 +97,7 @@ document.getElementById('productviewed').addEventListener('click', function () {
 //     "test_prop": "Eng"
 // });
 
-    clevertap.event.push("c_order_placed1", {
-order_id_1: "690992545418879489"
-});
+    clevertap.event.push("Child eSIM Activated", {});
 
 
 
