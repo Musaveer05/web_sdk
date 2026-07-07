@@ -89,7 +89,7 @@ var num1 = "12345";   // string
 var num2 = 12345;     // integer
 
 document.getElementById('productviewed').addEventListener('click', function () {
-    console.log('Raised test_event_01 having Date prop');
+    console.log('Raised Child eSIM Activated');
 
 //     const eventDate = Math.floor(new Date(2026, 2, 16, 10, 15, 0).getTime() / 1000); // Convert to epoch seconds
 // cleverTap.event.push("test_event_01", {
