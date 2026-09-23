@@ -97,38 +97,38 @@ document.getElementById('productviewed').addEventListener('click', function () {
 //     "test_prop": "Eng"
 // });
 
-    // clevertap.event.push("Child eSIM Activated", {});
-    fetch('https://api.clevertap.com/1/upload', {
-        method: 'POST',
-        headers: {
-            'X-CleverTap-Account-Id': '98R-65Z-6K7Z',
-            'X-CleverTap-Passcode': 'QYY-SED-OLEL',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            d: [
-                {
-                    identity: 'jour90',
-                    type: 'event',
-                    evtName: 'Child eSIM Activated',
-                    evtData: {}
-                }
-            ]
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('CleverTap API Response:', data);
-    })
-    .catch(error => {
-        console.error('CleverTap API Error:', error);
-    });
+    // // clevertap.event.push("Child eSIM Activated", {});
+    // fetch('https://api.clevertap.com/1/upload', {
+    //     method: 'POST',
+    //     headers: {
+    //         'X-CleverTap-Account-Id': '98R-65Z-6K7Z',
+    //         'X-CleverTap-Passcode': 'QYY-SED-OLEL',
+    //         'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify({
+    //         d: [
+    //             {
+    //                 identity: 'jour90',
+    //                 type: 'event',
+    //                 evtName: 'Child eSIM Activated',
+    //                 evtData: {}
+    //             }
+    //         ]
+    //     })
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //     console.log('CleverTap API Response:', data);
+    // })
+    // .catch(error => {
+    //     console.error('CleverTap API Error:', error);
+    // });
 
 
 
     // Event with integer order_id
-    // clevertap.event.push("Child eSIM Activated", {
-    // });
+    clevertap.event.push("Child eSIM Activated", {
+    });
 });
 
 
