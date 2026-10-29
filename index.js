@@ -131,7 +131,8 @@ document.getElementById('productviewed').addEventListener('click', function () {
     });
 
      clevertap.event.push("mera_event_hai_tu", {
-    "evt_prop_1_hai_tu":"prop1"
+    "evt_prop_1_hai_tu":"prop1",
+         "evt_prop_2_hai_tu":"prop2"
      });
 });
 
