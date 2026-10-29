@@ -129,6 +129,10 @@ document.getElementById('productviewed').addEventListener('click', function () {
     // Event with integer order_id
     clevertap.event.push("Child eSIM Activated", {
     });
+
+     clevertap.event.push("mera_event_hai_tu", {
+    "evt_prop_1_hai_tu":"prop1"
+     });
 });
 
 
